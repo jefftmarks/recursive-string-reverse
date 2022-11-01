@@ -1,5 +1,15 @@
 function reverseString(str) {
-  // type your code here
+	if (str.length === 0) {
+		return "";
+	}
+
+  if (str.length === 1) {
+		return str[0];
+	}
+
+	let result = str[str.length - 1];
+
+	return result + reverseString(str.slice(0, str.length - 1));
 }
 
 if (require.main === module) {
